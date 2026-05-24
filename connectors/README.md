@@ -13,6 +13,7 @@ endorse third-party code automatically.
 | SAIJ OCR MCP | SAIJ + OCR | Scanned PDFs and older legal materials |
 | JUBA MCP | Buenos Aires Province case law | Provincial case-law retrieval |
 | Boletin Oficial RA MCP | Boletin Oficial | Official publications and updates |
+| [bopba-mcp](https://github.com/adrianlerer/bopba-mcp) | Boletin Oficial de la Provincia de Buenos Aires | Official PBA publications: laws, decrees, resolutions, edicts, tenders and notices |
 | Normativa PBA MCP | Province of Buenos Aires legislation | Provincial legislation and regulations |
 | Tesauro SAIJ | Controlled vocabulary | Semantic expansion for Argentine legal search |
 
@@ -48,6 +49,20 @@ Every connector should return:
 - status: verified, stable, needs verification or unverified.
 
 See `schemas/legal-tool-response.schema.json`.
+
+## BOPBA vs Normativa PBA
+
+BOPBA and Normativa PBA should be treated as complementary sources:
+
+- **BOPBA** verifies official publication: date, bulletin, section, PDF and
+  publication evidence.
+- **Normativa PBA** is better suited for consolidated legal text and normative
+  lookup when available.
+
+For production legal analysis, a publication found in BOPBA should not be
+treated automatically as current consolidated law. Mark it as official
+publication evidence, then verify current text, amendments and repeal status in
+the best available consolidated source.
 
 ## Safety rule
 
