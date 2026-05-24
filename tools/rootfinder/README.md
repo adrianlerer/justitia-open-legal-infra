@@ -1,4 +1,9 @@
-# Rootfinder — Public Primitive
+# RootFinder — Interoperability Notes
+
+Canonical projects:
+
+- https://github.com/adrianlerer/RootFinder-Production
+- https://github.com/adrianlerer/rootfinder-legal-ai
 
 Rootfinder identifies the likely root of a legal-analysis problem:
 
@@ -9,5 +14,6 @@ Rootfinder identifies the likely root of a legal-analysis problem:
 - critical deadline;
 - evidentiary risk.
 
-It is deliberately simple. The value is the workflow: make the failure mode
-explicit before drafting.
+The local primitive is deliberately simple. It exists to make RootFinder-style
+failure modes usable in schemas, tests and public evals without replacing the
+canonical repositories.

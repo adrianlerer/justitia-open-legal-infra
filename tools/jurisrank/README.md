@@ -1,8 +1,14 @@
-# JurisRank — Public Primitive
+# JurisRank — Interoperability Notes
 
-JurisRank is a public concept for ranking legal authority. The production
-JustitIA calibration is private; this public primitive exposes only a simple,
-transparent baseline:
+Canonical project:
+
+- https://github.com/adrianlerer/jurisrank-core
+
+This folder does not replace `jurisrank-core`. It provides a small compatibility
+primitive and schema alignment for legal AI systems that want to consume
+JurisRank-style authority signals.
+
+The local primitive exposes only a simple, transparent baseline:
 
 - court hierarchy;
 - recency;
@@ -10,4 +16,4 @@ transparent baseline:
 - citation depth;
 - negative treatment flag.
 
-Use this as a starter utility or benchmark, not as an authoritative ranking.
+Use the canonical repository for the actual JurisRank open core.

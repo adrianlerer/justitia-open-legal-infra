@@ -27,10 +27,22 @@ shared layer for safer legal AI:
 | `schemas/` | JSON Schemas for source references, citations, tool responses and findings |
 | `connectors/` | Registry of MCP/legal data connectors for Argentina, Spain/UE and comparative work |
 | `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene |
-| `tools/jurisrank/` | Public JurisRank concept: authority scoring primitives |
-| `tools/rootfinder/` | Public Rootfinder concept: issue-root extraction for legal analysis |
-| `tools/iusmorfos/` | Public Iusmorfos concept: morphology of legal arguments |
+| `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
+| `tools/rootfinder/` | Interoperability notes for the public RootFinder family |
+| `tools/iusmorfos/` | Interoperability notes for the public Iusmorfos family |
 | `evals/` | Synthetic control cases for legal AI verification |
+
+## Related public projects
+
+This repository is a hub. The canonical public projects remain separate:
+
+- [jurisrank-core](https://github.com/adrianlerer/jurisrank-core): open core for legal citation network ranking and jurisprudential authority analysis.
+- [RootFinder-Production](https://github.com/adrianlerer/RootFinder-Production): production-oriented RootFinder materials.
+- [rootfinder-legal-ai](https://github.com/adrianlerer/rootfinder-legal-ai): legal AI issue-root analysis project.
+- [Iusmorfos-dawkins-evolucion](https://github.com/adrianlerer/Iusmorfos-dawkins-evolucion): public Iusmorfos/evolutionary legal theory materials.
+
+The small utilities under `src/` are lightweight compatibility primitives and
+tests. They are not intended to replace those repositories.
 
 ## What stays private
 
