@@ -1,0 +1,20 @@
+{
+  "name": "justitia-open-legal-infra",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Open legal AI infrastructure: source grounding, schemas, public legal utilities and synthetic eval cases.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "legal-ai",
+    "mcp",
+    "legaltech",
+    "argentina",
+    "jurisprudence",
+    "citation-validation"
+  ],
+  "author": "Ignacio Adrian Lerer",
+  "license": "Apache-2.0"
+}

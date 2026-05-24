@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/audit-finding.schema.json",
+  "title": "Auditable Legal Finding",
+  "type": "object",
+  "required": ["id", "title", "severity", "status", "evidence", "evidenceStrength"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "severity": { "type": "string", "enum": ["alto", "medio", "bajo", "indeterminado"] },
+    "status": {
+      "type": "string",
+      "enum": ["verificado", "estable", "verificar", "inferido", "sin_evidencia"]
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidenceStrength": {
+      "type": "string",
+      "enum": ["fuerte", "media", "debil", "sin_evidencia"]
+    },
+    "sourceTags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommendation": { "type": "string" }
+  },
+  "additionalProperties": false
+}

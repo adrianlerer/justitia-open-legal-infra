@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/legal-tool-response.schema.json",
+  "title": "Legal Tool Response",
+  "type": "object",
+  "required": ["status", "result", "sources", "audit"],
+  "properties": {
+    "status": { "type": "string", "enum": ["ok", "error", "blocked", "partial"] },
+    "result": { "type": "object" },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "./source-reference.schema.json" }
+    },
+    "verification": {
+      "type": "string",
+      "enum": ["verified", "stable", "needs_verification", "unverified", "not_applicable"]
+    },
+    "jurisdiction": { "type": "string" },
+    "time_scope": { "type": "string" },
+    "policy_flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "audit": {
+      "type": "object",
+      "required": ["trace_id", "tool_name", "latency_ms"],
+      "properties": {
+        "trace_id": { "type": "string" },
+        "tool_name": { "type": "string" },
+        "latency_ms": { "type": "integer", "minimum": 0 },
+        "source_version": { "type": "string" },
+        "policy_decision": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

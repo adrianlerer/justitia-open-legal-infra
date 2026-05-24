@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/source-reference.schema.json",
+  "title": "Legal Source Reference",
+  "type": "object",
+  "required": ["source_id", "title", "source_type", "jurisdiction", "retrieved_at"],
+  "properties": {
+    "source_id": { "type": "string" },
+    "title": { "type": "string" },
+    "source_type": {
+      "type": "string",
+      "enum": ["norm", "case", "regulation", "administrative_guidance", "doctrine", "client_document", "unknown"]
+    },
+    "jurisdiction": { "type": "string" },
+    "official": { "type": "boolean", "default": false },
+    "authority": { "type": "string" },
+    "locator": {
+      "type": "object",
+      "properties": {
+        "article": { "type": "string" },
+        "section": { "type": "string" },
+        "page": { "type": "string" },
+        "paragraph": { "type": "string" },
+        "ecli": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "date": { "type": "string" },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "hash": { "type": "string" },
+    "license": { "type": "string" }
+  },
+  "additionalProperties": false
+}
