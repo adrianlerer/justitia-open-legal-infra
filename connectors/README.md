@@ -14,6 +14,7 @@ endorse third-party code automatically.
 | JUBA MCP | Buenos Aires Province case law | Provincial case-law retrieval |
 | Boletin Oficial RA MCP | Boletin Oficial | Official publications and updates |
 | [bopba-mcp](https://github.com/adrianlerer/bopba-mcp) | Boletin Oficial de la Provincia de Buenos Aires | Official PBA publications: laws, decrees, resolutions, edicts, tenders and notices |
+| [ptn-mcp](https://github.com/voftec/ptn-mcp) | Procuracion del Tesoro de la Nacion | Administrative legal opinions, technical opinions and advisory doctrine from PTN |
 | Normativa PBA MCP | Province of Buenos Aires legislation | Provincial legislation and regulations |
 | Tesauro SAIJ | Controlled vocabulary | Semantic expansion for Argentine legal search |
 
@@ -63,6 +64,30 @@ For production legal analysis, a publication found in BOPBA should not be
 treated automatically as current consolidated law. Mark it as official
 publication evidence, then verify current text, amendments and repeal status in
 the best available consolidated source.
+
+## PTN connector
+
+PTN is a different type of authority. It is not a statute, decree or judgment.
+It is administrative legal doctrine from the Procuracion del Tesoro de la
+Nacion.
+
+Use PTN for:
+
+- federal administrative-law interpretation;
+- state contracts and public-law opinions;
+- consistency checks for executive-branch legal criteria;
+- identifying advisory doctrine that may matter to agencies.
+
+Do not use PTN as if it were binding case law or consolidated legislation. A PTN
+opinion should be tagged as administrative doctrine and weighed against the
+applicable statute, decree, regulation and judicial precedent.
+
+Live endpoints reported by the maintainer:
+
+- GitHub: https://github.com/voftec/ptn-mcp
+- NPM: https://www.npmjs.com/package/ptn-mcp
+- Vercel: https://ptn-mcp.vercel.app
+- Prompts: https://ptn-mcp.vercel.app/prompts
 
 ## Safety rule
 
