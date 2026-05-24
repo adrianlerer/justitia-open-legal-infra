@@ -7,7 +7,7 @@ The public repository may contain:
 - generic legal-source schemas;
 - official-source connector registries;
 - deterministic scoring utilities;
-- public versions of JurisRank, Rootfinder and Iusmorfos;
+- public versions or interoperability notes for JurisRank, RootFinder and Legal-Memespace;
 - synthetic evaluation cases;
 - high-level workflow guidance;
 - examples that do not expose client strategy or private prompts.

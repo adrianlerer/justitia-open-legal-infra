@@ -29,7 +29,7 @@ shared layer for safer legal AI:
 | `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene |
 | `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
 | `tools/rootfinder/` | Interoperability notes for the public RootFinder family |
-| `tools/iusmorfos/` | Interoperability notes for the public Iusmorfos family |
+| `tools/legal-memespace/` | Interoperability notes for Legal-Memespace doctrine mapping |
 | `evals/` | Synthetic control cases for legal AI verification |
 
 ## Related public projects
@@ -39,7 +39,8 @@ This repository is a hub. The canonical public projects remain separate:
 - [jurisrank-core](https://github.com/adrianlerer/jurisrank-core): open core for legal citation network ranking and jurisprudential authority analysis.
 - [RootFinder-Production](https://github.com/adrianlerer/RootFinder-Production): production-oriented RootFinder materials.
 - [rootfinder-legal-ai](https://github.com/adrianlerer/rootfinder-legal-ai): legal AI issue-root analysis project.
-- [Iusmorfos-dawkins-evolucion](https://github.com/adrianlerer/Iusmorfos-dawkins-evolucion): public Iusmorfos/evolutionary legal theory materials.
+- [peralta-metamorphosis](https://github.com/adrianlerer/peralta-metamorphosis): open-source algorithms from the JCLLT constitutional drift paper: JurisRank, RootFinder and Legal-Memespace.
+- [Iusmorfos-dawkins-evolucion](https://github.com/adrianlerer/Iusmorfos-dawkins-evolucion): broader public Iusmorfos/evolutionary legal theory materials.
 
 The small utilities under `src/` are lightweight compatibility primitives and
 tests. They are not intended to replace those repositories.

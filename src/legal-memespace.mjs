@@ -9,7 +9,7 @@ export function classifyArgumentMove(sentence) {
   return 'unclassified';
 }
 
-export function morphLegalParagraph(paragraph) {
+export function mapLegalMemespace(paragraph) {
   const protectedParagraph = paragraph
     .replace(/\bart\./gi, 'art<dot>')
     .replace(/\barts\./gi, 'arts<dot>');
