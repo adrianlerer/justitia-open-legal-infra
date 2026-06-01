@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/proprietary-intelligence-policy.schema.json",
+  "title": "Proprietary Legal Intelligence Policy",
+  "type": "object",
+  "required": ["state", "categories", "signals", "scope", "allowed_use"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["PASS", "PROTECT", "ESCALATE", "BLOCK"]
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "matter_history",
+          "client_context",
+          "firm_playbook",
+          "partner_judgment",
+          "drafting_preference",
+          "negotiation_pattern",
+          "risk_tolerance",
+          "internal_precedent",
+          "compliance_policy",
+          "risk_matrix",
+          "training_trace",
+          "third_party_assessment",
+          "other"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "scope": {
+      "type": "object",
+      "required": ["tenant_scoped", "role_scoped", "purpose_scoped"],
+      "properties": {
+        "tenant_scoped": { "type": "boolean" },
+        "role_scoped": { "type": "boolean" },
+        "matter_scoped": { "type": "boolean" },
+        "purpose_scoped": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "allowed_use": {
+      "type": "string"
+    },
+    "public_model_training_allowed": {
+      "type": "boolean",
+      "default": false
+    },
+    "cross_tenant_reuse_allowed": {
+      "type": "boolean",
+      "default": false
+    },
+    "exportability_required": {
+      "type": "boolean",
+      "default": true
+    },
+    "next_action": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

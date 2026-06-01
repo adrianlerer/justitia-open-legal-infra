@@ -15,7 +15,7 @@ evaluations. The useful public contribution is not a clone of a product. It is a
 shared layer for safer legal AI:
 
 - connectors to official legal sources;
-- schemas for legal-source responses;
+- schemas for legal-source responses and proprietary-intelligence boundaries;
 - deterministic utilities for citation/evidence review;
 - public versions of research tools;
 - synthetic verification cases.
@@ -24,9 +24,9 @@ shared layer for safer legal AI:
 
 | Area | Contents |
 |---|---|
-| `schemas/` | JSON Schemas for source references, citations, tool responses and findings |
+| `schemas/` | JSON Schemas for source references, citations, tool responses, findings and proprietary-intelligence boundaries |
 | `connectors/` | Registry of MCP/legal data connectors for Argentina, Spain/UE and comparative work |
-| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates |
+| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates, proprietary-intelligence gates |
 | `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
 | `tools/rootfinder/` | Interoperability notes for the public RootFinder family |
 | `tools/legal-memespace/` | Interoperability notes for Legal-Memespace doctrine mapping |
@@ -51,6 +51,8 @@ tests. They are not intended to replace those repositories.
 - private SRA routing, prompts and tenant configuration;
 - proprietary Argentine/LatAm practice packs;
 - client documents, client corpora and work product;
+- firm-specific legal intelligence, matter memory, internal criteria, playbooks,
+  drafting preferences, negotiation patterns and client risk tolerance;
 - internal eval runs from real matters;
 - IntegridAI / FLAISimulator proprietary scenarios;
 - paid verticals such as directors/sindics and law-firm workflows.
