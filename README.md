@@ -15,8 +15,8 @@ evaluations. The useful public contribution is not a clone of a product. It is a
 shared layer for safer legal AI:
 
 - connectors to official legal sources;
-- schemas for legal-source responses, proprietary-intelligence boundaries and
-  legal-quant workflows;
+- schemas for legal-source responses, proprietary-intelligence boundaries,
+  agentic-review benches and legal-quant workflows;
 - deterministic utilities for citation/evidence review;
 - public versions of research tools;
 - synthetic verification cases.
@@ -25,9 +25,9 @@ shared layer for safer legal AI:
 
 | Area | Contents |
 |---|---|
-| `schemas/` | JSON Schemas for source references, citations, tool responses, findings, proprietary-intelligence boundaries and legal-quant workflows |
+| `schemas/` | JSON Schemas for source references, citations, tool responses, findings, proprietary-intelligence boundaries, agentic-review benches and legal-quant workflows |
 | `connectors/` | Registry of MCP/legal data connectors for Argentina, Spain/UE and comparative work |
-| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates, proprietary-intelligence gates, legal-quant operating model |
+| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates, proprietary-intelligence gates, agentic-review benches, legal-quant operating model |
 | `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
 | `tools/rootfinder/` | Interoperability notes for the public RootFinder family |
 | `tools/legal-memespace/` | Interoperability notes for Legal-Memespace doctrine mapping |

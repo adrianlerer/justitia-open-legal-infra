@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/agentic-review-bench.schema.json",
+  "title": "Agentic Review Bench",
+  "type": "object",
+  "required": ["state", "document_type", "lanes", "transition_gates", "next_actions"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["PASS", "REVIEW", "ESCALATE", "BLOCK"]
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "document_type": {
+      "type": "string",
+      "enum": ["contract", "judgment", "statute", "pleading", "corporate_governance", "compliance", "general"]
+    },
+    "lanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "summary"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": ["document_graph", "source_verification", "adversarial_review", "decision_translation", "human_gate", "transition_gate"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PASS", "REVIEW", "ESCALATE", "BLOCK"]
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "transition_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "required_action"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PASS", "REVIEW", "ESCALATE", "BLOCK"]
+          },
+          "required_action": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
