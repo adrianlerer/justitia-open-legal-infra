@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://justitia.com.ar/schemas/execution-boundary.schema.json",
+  "title": "ExecutionBoundaryAudit",
+  "type": "object",
+  "required": ["state", "action_class", "invariants", "next_action"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["PASS", "REVIEW", "ESCALATE", "BLOCK"]
+    },
+    "action_class": {
+      "type": "string",
+      "enum": ["representation", "recommendation", "draft", "institutional_commitment"]
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "satisfied"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "source_provenance",
+              "delegated_authority",
+              "uncertainty_state",
+              "transition_gate",
+              "reversibility"
+            ]
+          },
+          "satisfied": { "type": "boolean" },
+          "detail": { "type": "string" }
+        }
+      }
+    },
+    "next_action": { "type": "string" }
+  }
+}

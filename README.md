@@ -16,7 +16,7 @@ shared layer for safer legal AI:
 
 - connectors to official legal sources;
 - schemas for legal-source responses, proprietary-intelligence boundaries,
-  agentic-review benches and legal-quant workflows;
+  agentic-review benches, execution-boundary invariants and legal-quant workflows;
 - deterministic utilities for citation/evidence review;
 - public versions of research tools;
 - synthetic verification cases.
@@ -25,7 +25,7 @@ shared layer for safer legal AI:
 
 | Area | Contents |
 |---|---|
-| `schemas/` | JSON Schemas for source references, citations, tool responses, findings, proprietary-intelligence boundaries, agentic-review benches and legal-quant workflows |
+| `schemas/` | JSON Schemas for source references, citations, tool responses, findings, proprietary-intelligence boundaries, agentic-review benches, execution-boundary invariants and legal-quant workflows |
 | `connectors/` | Registry of MCP/legal data connectors for Argentina, Spain/UE and comparative work |
 | `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates, proprietary-intelligence gates, agentic-review benches, legal-quant operating model |
 | `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
