@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adrianlerer/justitia-open-legal-infra/schemas/legal-quant-workflow.schema.json",
+  "title": "Legal Quant Workflow",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "legal_domain",
+    "workflow_steps",
+    "gates",
+    "proof_of_work",
+    "output_contract"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "legal_domain": { "type": "string" },
+    "jurisdiction": { "type": "string" },
+    "workflow_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "purpose", "inputs", "outputs"],
+        "properties": {
+          "name": { "type": "string" },
+          "purpose": { "type": "string" },
+          "inputs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "outputs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "agent_role": { "type": "string" },
+          "verification": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "document_model": {
+      "type": "object",
+      "properties": {
+        "treat_as_system": { "type": "boolean" },
+        "dependency_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "definition",
+              "citation",
+              "authority",
+              "fact",
+              "clause",
+              "obligation",
+              "deadline",
+              "risk",
+              "approval",
+              "other"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "legal_uncertainty",
+          "delegation_process",
+          "administrative_law",
+          "proprietary_intelligence",
+          "citation_hygiene",
+          "human_signoff"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "proof_of_work": {
+      "type": "object",
+      "required": ["sample_input", "sample_output", "rubric"],
+      "properties": {
+        "sample_input": { "type": "string" },
+        "sample_output": { "type": "string" },
+        "rubric": { "type": "string" },
+        "demo_url": { "type": "string" },
+        "repository_url": { "type": "string" },
+        "known_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "output_contract": {
+      "type": "object",
+      "required": ["format", "review_state"],
+      "properties": {
+        "format": { "type": "string" },
+        "review_state": {
+          "type": "string",
+          "enum": ["draft", "internal_review", "client_ready", "blocked"]
+        },
+        "sources_required": { "type": "boolean" },
+        "exportable": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
