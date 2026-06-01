@@ -26,7 +26,7 @@ shared layer for safer legal AI:
 |---|---|
 | `schemas/` | JSON Schemas for source references, citations, tool responses and findings |
 | `connectors/` | Registry of MCP/legal data connectors for Argentina, Spain/UE and comparative work |
-| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene |
+| `skills/` | Public, sanitized legal AI skills: grounding, deadlines, citation hygiene, administrative-law reliance gates |
 | `tools/jurisrank/` | Interoperability notes for the public JurisRank family |
 | `tools/rootfinder/` | Interoperability notes for the public RootFinder family |
 | `tools/legal-memespace/` | Interoperability notes for Legal-Memespace doctrine mapping |
